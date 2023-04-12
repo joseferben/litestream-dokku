@@ -1,3 +1,3 @@
-FROM litestream/litestream
+FROM litestream/litestream:latest
 
 COPY etc/litestream.yml /etc/litestream.yml
