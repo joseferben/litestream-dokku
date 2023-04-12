@@ -1,0 +1,9 @@
+access-key-id: ${AWS_ACCESS_KEY_ID}
+secret-access-key: ${AWS_SECRET_ACCESS_KEY}
+
+dbs:
+  - path: /var/lib/dokku/data/storage/joseferbencom/db.sqlite3
+    replicas:
+      - url: https://carrot-backups.s3.eu-central-1.amazonaws.com/joseferben.com/
+        retention: 168h
+        snapshot-interval: 12h
