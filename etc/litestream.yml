@@ -4,6 +4,7 @@ secret-access-key: ${AWS_SECRET_ACCESS_KEY}
 dbs:
   - path: /var/lib/dokku/data/storage/joseferbencom/db.sqlite3
     replicas:
-      - url: https://carrot-backups.s3.eu-central-1.amazonaws.com/joseferben.com/
+      - url: s3://carrot-backups/joseferben.com/
+        region: eu-central-1
         retention: 168h
         snapshot-interval: 12h
