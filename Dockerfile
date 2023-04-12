@@ -37,4 +37,3 @@ EXPOSE 8080
 
 # Copy Litestream configuration file & startup script.
 COPY etc/litestream.yml /etc/litestream.yml
-COPY scripts/run.sh /scripts/run.sh
