@@ -1,1 +1,1 @@
-web: litestream replicate
+web: replicate
