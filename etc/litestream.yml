@@ -1,10 +1,17 @@
+addr: ":8080"
 access-key-id: ${AWS_ACCESS_KEY_ID}
 secret-access-key: ${AWS_SECRET_ACCESS_KEY}
 
 dbs:
   - path: /databases/joseferben/db.sqlite3
     replicas:
-      - url: s3://carrot-backups/joseferben/
+      - url: s3://carrot-backups/joseferben/db/
+        region: eu-central-1
+        retention: 168h
+        snapshot-interval: 12h
+  - path: /databases/joseferben/huey.sqlite3
+    replicas:
+      - url: s3://carrot-backups/joseferben/huey/
         region: eu-central-1
         retention: 168h
         snapshot-interval: 12h
