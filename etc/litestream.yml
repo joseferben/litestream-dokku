@@ -15,3 +15,15 @@ dbs:
         region: eu-central-1
         retention: 168h
         snapshot-interval: 12h
+  - path: /databases/performance90/db.sqlite3
+    replicas:
+      - url: s3://carrot-backups/performance90/db/
+        region: eu-central-1
+        retention: 168h
+        snapshot-interval: 12h
+  - path: /databases/performance90/huey.sqlite3
+    replicas:
+      - url: s3://carrot-backups/performance90/huey/
+        region: eu-central-1
+        retention: 168h
+        snapshot-interval: 12h
