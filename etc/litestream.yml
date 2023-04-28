@@ -27,3 +27,9 @@ dbs:
         region: eu-central-1
         retention: 168h
         snapshot-interval: 12h
+  - path: /databases/cms/db.sqlite3
+    replicas:
+      - url: s3://carrot-backups/cms/db/
+        region: eu-central-1
+        retention: 168h
+        snapshot-interval: 12h
