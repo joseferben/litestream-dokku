@@ -24,3 +24,10 @@ dbs:
         retention: 168h
         snapshot-interval: 12h
         sync-interval: 60s
+  - path: /databases/wwyb/db.sqlite3
+    replicas:
+      - url: s3://carrot-backups/wwyb/db/
+        region: eu-central-1
+        retention: 168h
+        snapshot-interval: 4h
+        sync-interval: 60s
